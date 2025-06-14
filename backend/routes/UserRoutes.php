@@ -1,6 +1,7 @@
 <?php
 
 Flight::route('GET /users', function () {
+    Flight::auth_middleware()->authorizeRole(Roles::ADMIN);
     Flight::json(Flight::userService()->getAll());
 });
 

@@ -25,11 +25,10 @@ class AuthService extends BaseService {
 
     $entity['password'] = password_hash($entity['password'], PASSWORD_BCRYPT);
 
-    // 🟢 Call add(), but store the result separately
     $created_user = $this->create($entity); // ✅ calls BaseService::create()
 
 
-    // 🛑 Fix: unset password from original $entity (optional), or from $created_user if it's an array
+    // Fix: unset password from original $entity (optional), or from $created_user if it's an array
     if (is_array($created_user)) {
         unset($created_user['password']);
     }

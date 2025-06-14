@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'fc73bab8d04e21bcdda37ca319c63800' => $vendorDir . '/mikecao/flight/flight/autoload.php',
+    '4cdafd4a5191caf078235e7dd119fdaf' => $vendorDir . '/flightphp/core/flight/autoload.php',
+    'e3cd3e6ea0fe16cf6c6b16fa591c5162' => $vendorDir . '/flightphp/core/flight/Flight.php',
 );
