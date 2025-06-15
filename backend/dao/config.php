@@ -4,16 +4,16 @@ class Config {
        return Config::get_env("DB_NAME", "booknstay");
    }
    public static function DB_PORT() {
-       return Config::get_env("DB_PORT", 25060);
+       return Config::get_env("DB_PORT", 3306);
    }
    public static function DB_USER() {
-       return Config::get_env("DB_USER", 'doadmin');
+       return Config::get_env("DB_USER", 'root');
    }
    public static function DB_PASSWORD() {
-       return Config::get_env("DB_PASSWORD", 'AVNS_jnSoUyqxyCPvASMkjUC');
+       return Config::get_env("DB_PASSWORD", 'haris');
    }
    public static function DB_HOST() {
-       return Config::get_env("DB_HOST", 'db-mysql-fra1-22471-do-user-23156208-0.k.db.ondigitalocean.com');
+       return Config::get_env("DB_HOST", '127.0.0.1');
    }
    public static function JWT_SECRET() {
        return Config::get_env("JWT_SECRET", 'zlatka');
