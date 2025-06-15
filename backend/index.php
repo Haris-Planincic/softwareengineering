@@ -18,7 +18,7 @@ require_once __DIR__ . '/services/AuthService.php';
 
 // Load middleware and roles
 require_once __DIR__ . '/middleware/AuthMiddleware.php';
-require_once __DIR__ . '/data/Roles.php';
+require_once __DIR__ . '/data/roles.php';
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
