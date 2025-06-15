@@ -80,4 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert("❌ Booking failed: " + err.message);
     }
   });
+
 });
+
+

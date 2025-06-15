@@ -22,6 +22,28 @@
 	<link rel="stylesheet" href="css/daterangepicker.css">
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+  .btn-browse {
+    font-size: 1.75rem;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #001f3f, #003366); /* Navy gradient */
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .btn-browse:hover {
+    background: linear-gradient(135deg, #003366, #001f3f); /* Reverse navy gradient */
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+    text-decoration: none;
+    color: white;
+  }
+</style>
 
 	<title>BooknStay</title>
 </head>
@@ -74,38 +96,12 @@
 
 						<div class="row">
 							<div class="col-12">
-								<form class="form">
-									<div class="row mb-2">
-										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-											<select name="" id="" class="form-control custom-select">
-												<option value="">Croatia</option>
-												<option value="">France</option>
-												<option value="">Italy</option>
-												<option value="">Spain</option>
-												<option value="">Greece</option>
-											</select>
-										</div>
-										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
-											<input type="text" class="form-control" name="daterange">
-										</div>
-										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
-											<input type="text" class="form-control" placeholder="# of People">
-										</div>
+								<div class="text-center mt-5">
+  <a href="services.html" class="btn btn-browse">
+    Start Browsing
+  </a>
+</div>
 
-									</div>    
-									<div class="row align-items-center">
-										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-											<input type="submit" class="btn btn-primary btn-block" value="Search">
-										</div>
-										<div class="col-lg-8">
-											<label class="control control--checkbox mt-3">
-												<span class="caption">Save this search</span>
-												<input type="checkbox" checked="checked" />
-												<div class="control__indicator"></div>
-											</label>
-										</div>
-									</div>
-								</form>
 							</div>
 						</div>
 					</div>
