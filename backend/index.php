@@ -32,7 +32,7 @@ Flight::register('contactMessageService', 'ContactMessageService');
 Flight::register('auth_service', 'AuthService');
 Flight::register('auth_middleware', 'AuthMiddleware');
 
-// ✅ GLOBAL JWT MIDDLEWARE
+
 Flight::before('start', function (&$params, &$output) {
     $path = Flight::request()->url;
 
@@ -40,9 +40,13 @@ Flight::before('start', function (&$params, &$output) {
     if (
         strpos($path, '/auth/login') === 0 ||
         strpos($path, '/auth/register') === 0 ||
-        strpos($path, '/accommodations') === 0
+        preg_match('#^/accommodations($|/)#', $path) ||
+        strpos($path, '/contacts') === 0 ||
+        preg_match('#^/contacts($|/)#', $path) ||
+        preg_match('#^/bookings($|/)#', $path)
+
     ) {
-        return; // Skip JWT check
+        return; 
     }
 
     $headers = getallheaders();
@@ -59,7 +63,7 @@ Flight::before('start', function (&$params, &$output) {
     }
 });
 
-// Load route files (keep these last!)
+// Load route files 
 require_once __DIR__ . '/routes/UserRoutes.php';
 require_once __DIR__ . '/routes/AccommodationRoutes.php';
 require_once __DIR__ . '/routes/BookingRoutes.php';

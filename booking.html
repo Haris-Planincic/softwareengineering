@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Accommodation</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/daterangepicker.css"/>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Book This Accommodation</h2>
+  <form id="bookingForm">
+    <div class="form-group">
+      <label for="dateRange">Select Check-in and Check-out Dates:</label>
+      <input type="text" class="form-control" id="dateRange" required />
+    </div>
+    <button type="submit" class="btn btn-success mt-3">Confirm Booking</button>
+  </form>
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/bookings.js"></script>
+</body>
+</html>

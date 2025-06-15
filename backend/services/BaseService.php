@@ -20,8 +20,8 @@ class BaseService {
         return $this->dao->insert($data);
     }
 
-    public function update($id, $data) {
-        return $this->dao->update($id, $data);
+    public function update($id, $data, $primaryKey) {
+        return $this->dao->update($id, $data, $primaryKey);
     }
 
     public function delete($id) {

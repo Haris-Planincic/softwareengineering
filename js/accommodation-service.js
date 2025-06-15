@@ -26,8 +26,7 @@ function loadAccommodations() {
                   <p class="card-text"><strong>Location:</strong> ${acc.location}</p>
                   <p class="card-text"><strong>Price per night:</strong> €${acc.pricePerNight}</p>
                   <p class="card-text"><strong>Category:</strong> ${acc.category}</p>
-                  <a href="#" class="btn btn-primary">Details</a>
-                  <a href="#" class="btn btn-primary">Book Now</a>
+                 <a href="booking.html?accommodationId=${acc.accommodationId}" class="btn btn-primary">Book Now</a>
                 </div>
               </div>
             </div>

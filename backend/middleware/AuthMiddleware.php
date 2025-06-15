@@ -15,7 +15,6 @@ class AuthMiddleware {
         $decoded_token = JWT::decode($token, new Key(Config::JWT_SECRET(), 'HS256'));
         Flight::set('user', $decoded_token->user);
         Flight::set('jwt_token', $token);
-        // ✅ debug
         error_log("Decoded user: " . json_encode($decoded_token->user));
         return TRUE;
     } catch (Exception $e) {

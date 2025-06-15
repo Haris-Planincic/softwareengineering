@@ -17,5 +17,14 @@ class BookingService extends BaseService {
         }
         return $this->create($data);
     }
+
+    public function getBookingsByAccommodation($accommodationId) {
+        return $this->dao->getByAccommodationId($accommodationId);
+    }
+
+   public function delete($id) {
+    return $this->dao->deleteByBookingId($id);
+}
+
 }
 ?>

@@ -25,3 +25,8 @@ Flight::route('PUT /bookings/@id', function ($id) {
 Flight::route('DELETE /bookings/@id', function ($id) {
     Flight::json(Flight::bookingService()->delete($id));
 });
+
+Flight::route('GET /bookings/check/@accommodationId', function ($accommodationId) {
+    Flight::json(Flight::bookingService()->getBookingsByAccommodation($accommodationId));
+});
+

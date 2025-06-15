@@ -13,5 +13,10 @@ class AccommodationService extends BaseService {
         }
         return $this->create($data);
     }
+
+    public function delete($id) {
+    return $this->dao->delete($id);
+}
+
 }
 ?>

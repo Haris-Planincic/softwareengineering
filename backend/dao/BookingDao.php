@@ -12,5 +12,18 @@ class BookingDao extends BaseDao {
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public function getByAccommodationId($accommodationId) {
+        $stmt = $this->connection->prepare("SELECT * FROM Bookings WHERE accommodationId = :id AND status = 'Booked'");
+        $stmt->bindParam(':id', $accommodationId);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function deleteByBookingId($bookingId) {
+        $stmt = $this->connection->prepare("DELETE FROM Bookings WHERE bookingId = :id");
+        $stmt->bindParam(':id', $bookingId, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
 }
 ?>
