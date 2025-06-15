@@ -39,7 +39,8 @@ Flight::before('start', function (&$params, &$output) {
     // Allow public auth routes
     if (
         strpos($path, '/auth/login') === 0 ||
-        strpos($path, '/auth/register') === 0
+        strpos($path, '/auth/register') === 0 ||
+        strpos($path, '/accommodations') === 0
     ) {
         return; // Skip JWT check
     }
