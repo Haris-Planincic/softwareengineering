@@ -4,7 +4,7 @@ class Config {
        return Config::get_env("DB_NAME", "booknstay");
    }
    public static function DB_PORT() {
-       return Config::get_env("DB_PORT", 25060);
+       return Config::get_env("DB_PORT", 3306);
    }
    public static function DB_USER() {
        return Config::get_env("DB_USER", 'root');
